@@ -17,8 +17,8 @@ namespace webaudio {
 class MediaStreamTrack;
   
 class MediaStream : public ObjectWrap {
-  protected:
-  std::shared_ptr<lab::AudioHardwareSourceNode> audioNode;
+protected:
+  // std::shared_ptr<lab::AudioHardwareSourceNode> audioNode;
   
   friend class MediaStreamTrack;
 };
