@@ -64,7 +64,7 @@ NAN_METHOD(AudioSourceNode::New) {
 
       AudioContext *audioContext = ObjectWrap::Unwrap<AudioContext>(audioContextObj);
       {
-        lab::ContextRenderLock r(audioContext, "MicrophoneMediaStream::New");
+        lab::ContextRenderLock r(audioContext->audioContext.get(), "AudioSourceNode::New");
         audioSourceNode->audioNode = lab::MakeHardwareSourceNode(r);
       }
 
