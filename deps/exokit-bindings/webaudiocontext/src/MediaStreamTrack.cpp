@@ -99,8 +99,8 @@ NAN_METHOD(MediaStreamTrack::Stop) {
   Nan::HandleScope scope;
 
   MediaStreamTrack *mediaStreamTrack = ObjectWrap::Unwrap<MediaStreamTrack>(info.This());
-  MediaStream *mediaStream = mediaStreamTrack->mediaStream;
-  mediaStream->audioNode.reset();
+  /* MediaStream *mediaStream = mediaStreamTrack->mediaStream; // XXX should actually stop the media stream here
+  mediaStream->audioNode.reset(); */
 }
 
 }
